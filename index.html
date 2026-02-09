@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zikirmatik</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <p class="app__eyebrow">Zikirmatik</p>
+        <h1>Dijital Zikir Sayacı</h1>
+        <p class="app__subtitle">
+          Zikrinizi kolayca takip edin. Hedef belirleyin, sayın ve hatırlatıcı ile
+          odakta kalın.
+        </p>
+      </header>
+
+      <section class="card">
+        <div class="card__display">
+          <div class="card__count" id="counter">0</div>
+          <div class="card__goal">Hedef: <span id="goalValue">33</span></div>
+        </div>
+        <div class="card__actions">
+          <button class="button button--primary" id="incrementBtn">Zikir</button>
+          <button class="button" id="resetBtn">Sıfırla</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__row">
+          <label for="goalInput">Hedef</label>
+          <input id="goalInput" type="number" min="1" value="33" />
+        </div>
+        <div class="panel__row">
+          <label for="reminderSelect">Hatırlatıcı</label>
+          <select id="reminderSelect">
+            <option value="0">Kapalı</option>
+            <option value="15">15 dakika</option>
+            <option value="30">30 dakika</option>
+            <option value="60">60 dakika</option>
+          </select>
+        </div>
+        <div class="panel__row panel__row--progress">
+          <span>İlerleme</span>
+          <div class="progress">
+            <div class="progress__bar" id="progressBar"></div>
+          </div>
+          <span id="progressText">0%</span>
+        </div>
+      </section>
+
+      <section class="tip">
+        <h2>Günlük Niyet</h2>
+        <p>
+          Bugün kendinize şefkatli olun. Küçük adımlar büyük tesire dönüşür.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">Zikirmatik &copy; 2024</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
